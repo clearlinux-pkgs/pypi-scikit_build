@@ -4,7 +4,7 @@
 #
 Name     : pypi-scikit_build
 Version  : 0.12.0
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/ab/8d/fc770eb732553ae0af68d276865524cc17efd667f9e71da6c5a2ac876817/scikit-build-0.12.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ab/8d/fc770eb732553ae0af68d276865524cc17efd667f9e71da6c5a2ac876817/scikit-build-0.12.0.tar.gz
 Summary  : Improved build system generator for Python C/C++/Fortran/Cython extensions
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1642620312
+export SOURCE_DATE_EPOCH=1642707007
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
