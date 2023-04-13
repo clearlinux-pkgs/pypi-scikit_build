@@ -4,13 +4,13 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-scikit_build
-Version  : 0.17.0
-Release  : 25
-URL      : https://files.pythonhosted.org/packages/45/c8/3e6d1d7f0b2617c8f8e07ae4ac0d16d63787e88c493e43ce858aa6c2bd72/scikit_build-0.17.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/45/c8/3e6d1d7f0b2617c8f8e07ae4ac0d16d63787e88c493e43ce858aa6c2bd72/scikit_build-0.17.0.tar.gz
+Version  : 0.17.1
+Release  : 26
+URL      : https://files.pythonhosted.org/packages/91/3b/5b21f6475df037086ddef575170af11277567aa0c44cd8cada705c0e0d18/scikit_build-0.17.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/91/3b/5b21f6475df037086ddef575170af11277567aa0c44cd8cada705c0e0d18/scikit_build-0.17.1.tar.gz
 Summary  : Improved build system generator for Python C/C++/Fortran/Cython extensions
 Group    : Development/Tools
-License  : NCSA
+License  : Apache-2.0 BSD-2-Clause-Views MIT NCSA
 Requires: pypi-scikit_build-license = %{version}-%{release}
 Requires: pypi-scikit_build-python = %{version}-%{release}
 Requires: pypi-scikit_build-python3 = %{version}-%{release}
@@ -59,10 +59,10 @@ python3 components for the pypi-scikit_build package.
 
 
 %prep
-%setup -q -n scikit_build-0.17.0
-cd %{_builddir}/scikit_build-0.17.0
+%setup -q -n scikit_build-0.17.1
+cd %{_builddir}/scikit_build-0.17.1
 pushd ..
-cp -a scikit_build-0.17.0 buildavx2
+cp -a scikit_build-0.17.1 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681225020
+export SOURCE_DATE_EPOCH=1681405930
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
