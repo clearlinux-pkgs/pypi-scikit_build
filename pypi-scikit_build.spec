@@ -5,7 +5,7 @@
 #
 Name     : pypi-scikit_build
 Version  : 0.17.1
-Release  : 27
+Release  : 28
 URL      : https://files.pythonhosted.org/packages/91/3b/5b21f6475df037086ddef575170af11277567aa0c44cd8cada705c0e0d18/scikit_build-0.17.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/3b/5b21f6475df037086ddef575170af11277567aa0c44cd8cada705c0e0d18/scikit_build-0.17.1.tar.gz
 Summary  : Improved build system generator for Python C/C++/Fortran/Cython extensions
