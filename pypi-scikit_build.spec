@@ -5,12 +5,12 @@
 #
 Name     : pypi-scikit_build
 Version  : 0.17.1
-Release  : 26
+Release  : 27
 URL      : https://files.pythonhosted.org/packages/91/3b/5b21f6475df037086ddef575170af11277567aa0c44cd8cada705c0e0d18/scikit_build-0.17.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/91/3b/5b21f6475df037086ddef575170af11277567aa0c44cd8cada705c0e0d18/scikit_build-0.17.1.tar.gz
 Summary  : Improved build system generator for Python C/C++/Fortran/Cython extensions
 Group    : Development/Tools
-License  : Apache-2.0 BSD-2-Clause-Views MIT NCSA
+License  : Apache-2.0 MIT NCSA
 Requires: pypi-scikit_build-license = %{version}-%{release}
 Requires: pypi-scikit_build-python = %{version}-%{release}
 Requires: pypi-scikit_build-python3 = %{version}-%{release}
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681405930
+export SOURCE_DATE_EPOCH=1681418153
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
