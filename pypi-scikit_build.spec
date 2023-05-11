@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-scikit_build
-Version  : 0.17.3
-Release  : 30
-URL      : https://files.pythonhosted.org/packages/7a/e4/e3e48b927d0c6d258e19b28ed3920d69539d00ad52872dc2d30498d57fc0/scikit_build-0.17.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/7a/e4/e3e48b927d0c6d258e19b28ed3920d69539d00ad52872dc2d30498d57fc0/scikit_build-0.17.3.tar.gz
+Version  : 0.17.4
+Release  : 31
+URL      : https://files.pythonhosted.org/packages/77/36/f2bc868dde0193cacf4054bf9bc699af1c7a0d62d1c5b6c2bb54d4d72cec/scikit_build-0.17.4.tar.gz
+Source0  : https://files.pythonhosted.org/packages/77/36/f2bc868dde0193cacf4054bf9bc699af1c7a0d62d1c5b6c2bb54d4d72cec/scikit_build-0.17.4.tar.gz
 Summary  : Improved build system generator for Python C/C++/Fortran/Cython extensions
 Group    : Development/Tools
 License  : Apache-2.0 MIT NCSA
@@ -15,6 +15,8 @@ Requires: pypi-scikit_build-license = %{version}-%{release}
 Requires: pypi-scikit_build-python = %{version}-%{release}
 Requires: pypi-scikit_build-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(hatch_fancy_pypi_readme)
+BuildRequires : pypi(hatch_vcs)
 BuildRequires : pypi(hatchling)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -59,10 +61,10 @@ python3 components for the pypi-scikit_build package.
 
 
 %prep
-%setup -q -n scikit_build-0.17.3
-cd %{_builddir}/scikit_build-0.17.3
+%setup -q -n scikit_build-0.17.4
+cd %{_builddir}/scikit_build-0.17.4
 pushd ..
-cp -a scikit_build-0.17.3 buildavx2
+cp -a scikit_build-0.17.4 buildavx2
 popd
 
 %build
@@ -70,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682974828
+export SOURCE_DATE_EPOCH=1683814214
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

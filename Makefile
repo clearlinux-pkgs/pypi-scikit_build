@@ -1,5 +1,5 @@
 PKG_NAME := pypi-scikit_build
-URL = https://files.pythonhosted.org/packages/7a/e4/e3e48b927d0c6d258e19b28ed3920d69539d00ad52872dc2d30498d57fc0/scikit_build-0.17.3.tar.gz
+URL = https://files.pythonhosted.org/packages/77/36/f2bc868dde0193cacf4054bf9bc699af1c7a0d62d1c5b6c2bb54d4d72cec/scikit_build-0.17.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
