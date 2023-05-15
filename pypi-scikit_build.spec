@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-scikit_build
-Version  : 0.17.4
-Release  : 31
-URL      : https://files.pythonhosted.org/packages/77/36/f2bc868dde0193cacf4054bf9bc699af1c7a0d62d1c5b6c2bb54d4d72cec/scikit_build-0.17.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/77/36/f2bc868dde0193cacf4054bf9bc699af1c7a0d62d1c5b6c2bb54d4d72cec/scikit_build-0.17.4.tar.gz
+Version  : 0.17.5
+Release  : 32
+URL      : https://files.pythonhosted.org/packages/f8/23/a07369d9095648b61a302cd45c9661ef2d92fe546e0eb28a467c66c7c1d3/scikit_build-0.17.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/f8/23/a07369d9095648b61a302cd45c9661ef2d92fe546e0eb28a467c66c7c1d3/scikit_build-0.17.5.tar.gz
 Summary  : Improved build system generator for Python C/C++/Fortran/Cython extensions
 Group    : Development/Tools
 License  : Apache-2.0 MIT NCSA
@@ -61,10 +61,10 @@ python3 components for the pypi-scikit_build package.
 
 
 %prep
-%setup -q -n scikit_build-0.17.4
-cd %{_builddir}/scikit_build-0.17.4
+%setup -q -n scikit_build-0.17.5
+cd %{_builddir}/scikit_build-0.17.5
 pushd ..
-cp -a scikit_build-0.17.4 buildavx2
+cp -a scikit_build-0.17.5 buildavx2
 popd
 
 %build
@@ -72,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683814214
+export SOURCE_DATE_EPOCH=1684175164
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
