@@ -1,0 +1,50 @@
+From 3da5b539a65508b99307d868d0db6a43745232e2 Mon Sep 17 00:00:00 2001
+From: William Douglas <william.douglas@intel.com>
+Date: Fri, 18 Oct 2024 18:05:18 -0700
+Subject: [PATCH] Remove pypi-ninja requirement
+
+This isn't the ninja we ship, we don't want this.
+
+Signed-off-by: William Douglas <william.douglas@intel.com>
+---
+ skbuild/cmaker.py                  | 5 -----
+ skbuild/platform_specifics/unix.py | 8 +-------
+ 2 files changed, 1 insertion(+), 12 deletions(-)
+
+diff --git a/skbuild/cmaker.py b/skbuild/cmaker.py
+index edfbe4a..1938e14 100644
+--- a/skbuild/cmaker.py
++++ b/skbuild/cmaker.py
+@@ -243,11 +243,6 @@ class CMaker:
+         )
+ 
+         ninja_executable_path = None
+-        if generator.name == "Ninja":
+-            with contextlib.suppress(ImportError):
+-                import ninja  # pylint: disable=import-outside-toplevel
+-
+-                ninja_executable_path = os.path.join(ninja.BIN_DIR, "ninja")
+ 
+         if not os.path.exists(CMAKE_BUILD_DIR()):
+             os.makedirs(CMAKE_BUILD_DIR())
+diff --git a/skbuild/platform_specifics/unix.py b/skbuild/platform_specifics/unix.py
+index eb5f2db..6844f61 100644
+--- a/skbuild/platform_specifics/unix.py
++++ b/skbuild/platform_specifics/unix.py
+@@ -14,12 +14,6 @@ class UnixPlatform(abstract.CMakePlatform):
+ 
+     def __init__(self) -> None:
+         super().__init__()
+-        try:
+-            import ninja  # pylint: disable=import-outside-toplevel
+-
+-            ninja_executable_path = os.path.join(ninja.BIN_DIR, "ninja")
+-            ninja_args = [f"-DCMAKE_MAKE_PROGRAM:FILEPATH={ninja_executable_path}"]
+-        except ImportError:
+-            ninja_args = []
++        ninja_args = []
+ 
+         self.default_generators = [CMakeGenerator("Ninja", args=ninja_args), CMakeGenerator("Unix Makefiles")]
+-- 
+2.46.2
+
